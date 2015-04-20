@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'docman/index'
+  root 'docman#index'
 
   resources :documents
 
