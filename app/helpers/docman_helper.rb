@@ -1,0 +1,2 @@
+module DocmanHelper
+end
