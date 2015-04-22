@@ -1,3 +1,4 @@
+<% @page_name = "documents" %>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -13,6 +14,11 @@
 <p>
   <strong>Type:</strong>
   <%= @document.type %>
+</p>
+
+<p>
+  <strong>File Name:</strong>
+  <%= @document.file_file_name %>
 </p>
 
 <%= link_to 'Edit', edit_document_path(@document) %> |

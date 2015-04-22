@@ -10,10 +10,17 @@
       </ul>
     </div>
   <% end %>
-
+  <div class="filed">
+    <%= f.label :file %><br>
+    <%= f.file_field :file %>
+  </div>
   <div class="field">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <% if @document.file %>
+      <%= f.text_field :title, :value => @document.file_file_name%>
+    <% else %>
+      <%= f.text_field :title %>
+    <% end %>
   </div>
   <div class="field">
     <%= f.label :description %><br>
@@ -24,6 +31,6 @@
     <%= f.text_field :type %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit nil, :class => "btn btn-lg" %>
   </div>
 <% end %>
