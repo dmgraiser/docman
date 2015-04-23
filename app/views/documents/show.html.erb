@@ -1,25 +1,31 @@
 <% @page_name = "documents" %>
-<p id="notice"><%= notice %></p>
+<div class="container">  
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @document.title %>
-</p>
+  <h1>
+    <%= @document.title %>
+  </h1>
 
-<p>
-  <strong>Description:</strong>
-  <%= @document.description %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @document.description %>
+  </p>
 
-<p>
-  <strong>Type:</strong>
-  <%= @document.type %>
-</p>
+  <p>
+    <strong>Type:</strong>
+    <%= @document.type %>
+  </p>
 
-<p>
-  <strong>File Name:</strong>
-  <%= @document.file_file_name %>
-</p>
+  <p>
+    <strong>File Name:</strong>
+    <%= @document.file_file_name %>
+  </p>
 
-<%= link_to 'Edit', edit_document_path(@document) %> |
-<%= link_to 'Back', documents_path %>
+  <p>
+    <strong>Download Here:</strong>
+    <%= link_to @document.title, @document.file.url(:original, false) %>
+  </p>
+
+  <%= link_to 'Edit', edit_document_path(@document) %> |
+  <%= link_to 'Back', documents_path %>
+</div>

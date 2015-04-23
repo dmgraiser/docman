@@ -10,16 +10,16 @@
       </ul>
     </div>
   <% end %>
-  <div class="filed">
-    <%= f.label :file %><br>
-    <%= f.file_field :file %>
-  </div>
+  <% if @document.file? == false %>
+    <div class="filed">
+      <%= f.label :file %><br>
+      <%= f.file_field :file %>
+    </div>
+  <% end %>
   <div class="field">
-    <%= f.label :title %><br>
-    <% if @document.file %>
+    <% if @document.file? == true %>
+      <%= f.label :title %><br>
       <%= f.text_field :title, :value => @document.file_file_name%>
-    <% else %>
-      <%= f.text_field :title %>
     <% end %>
   </div>
   <div class="field">
