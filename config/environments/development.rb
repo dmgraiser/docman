@@ -38,4 +38,12 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => ENV['graiserdocman'],
+      :access_key_id => ENV['AKIAI4ELLVERXTV5UB7A'],
+      :secret_access_key => ENV['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']
+    }
+  }
 end
