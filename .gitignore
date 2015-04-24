@@ -17,6 +17,6 @@
 /tmp
 
 # Ignore secret key files
-*/development.rb
-*/production.rb
+development.rb
+production.rb
 
