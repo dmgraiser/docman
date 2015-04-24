@@ -80,8 +80,8 @@ Rails.application.configure do
     :storage => :s3,
     :s3_credentials => {
       :bucket => ENV['graiserdocman'],
-      :access_key_id => ENV['AKIAI4ELLVERXTV5UB7A'],
-      :secret_access_key => ENV['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']
+      :access_key_id => ENV[''],
+      :secret_access_key => ENV['']
     }
   }
 end
