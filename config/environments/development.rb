@@ -42,8 +42,8 @@ Rails.application.configure do
     :storage => :s3,
     :s3_credentials => {
       :bucket => ENV['graiserdocman'],
-      :access_key_id => ENV[''],
-      :secret_access_key => ENV['']
+      :access_key_id => ENV['TEST'],
+      :secret_access_key => ENV['TEST']
     }
   }
 end
